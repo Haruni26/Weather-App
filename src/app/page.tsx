@@ -4,8 +4,6 @@ import Navbar from "@/components/Navbar";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 
-// https://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=16bb267f1e5f0f149a3f59026645afe1
-
 type WeatherData = {
   coord: {
     lon: number;
@@ -61,10 +59,6 @@ export default function Home() {
       return data;
     },
   });
-
-  // fetch(
-  //   "https://api.openweathermap.org/data/2.5/weather?id=3571824&appid=16bb267f1e5f0f149a3f59026645afe1"
-  // ).then((res) => res.json())
 
   console.log("data", data);
 
